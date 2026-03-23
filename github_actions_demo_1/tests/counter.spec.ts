@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+//update for push purpose (random extra line)
 test('initial count is 0', async ({ page }) => {
 	await page.goto('/counter');
 	await expect(page.getByTestId('count-value')).toHaveText('0');
