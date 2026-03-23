@@ -6,6 +6,7 @@ test('initial count is 0', async ({ page }) => {
 	await expect(page.getByTestId('count-value')).toHaveText('0');
 });
 
+//update
 test('increment button increases count', async ({ page }) => {
 	await page.goto('/counter');
 	await page.getByTestId('increment-btn').click();
