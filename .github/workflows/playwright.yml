@@ -25,8 +25,8 @@ jobs:
           cache-dependency-path: github_actions_demo_1/package-lock.json
 
       - name: Create a .env file
-        run: echo "EXAMPLE_SECRET={{ secrets.EXAMPLE_SECRET }}" >> .env
-          echo "EXAMPLE_SECRET2"={{ secrets.EXAMPLE_SECRET2 }} >> .env
+        run: echo "EXAMPLE_SECRET=${{ secrets.EXAMPLE_SECRET }}" >> .env
+          echo "EXAMPLE_SECRET2=${{ secrets.EXAMPLE_SECRET2 }}" >> .env
 
       - name: Install dependencies
         run: npm ci
